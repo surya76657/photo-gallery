@@ -1,4 +1,5 @@
-const posts = [
+let posts: ({ code: string; display_src: string; caption: string; id: string; likes: number })[];
+posts = [
   {
     code: 'BAcyDyQwcXX',
     caption: 'Lunch #hamont',

@@ -4,8 +4,7 @@ import { Form, Formik, Field } from 'formik';
 const Comment: React.FC = (props: any) => {
   return (
     <div className='comment'>
-      {props &&
-        props.postComments.map((comment: any, i: any) => {
+      {props && props.postComments.map((comment: any, i: any) => {
           return (
             <div className='comment' key={i}>
               <strong>{comment.user}</strong>

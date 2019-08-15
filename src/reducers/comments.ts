@@ -1,17 +1,10 @@
-function comments(state: any = [], action: any) {
-  // console.log(state, action);
+export default function comments(state: any = [], action: any) {
   switch (action.type) {
     case 'ADD_COMMENT':
       console.log({ state });
       return {
         ...state,
-        [action.postId]: [
-          ...(state[action.postId] || []),
-          {
-            user: action.author,
-            text: action.comment
-          }
-        ]
+        [action.postId]: [...(state[action.postId] || []), { user: action.author, text: action.comment }]
       };
     case 'REMOVE_COMMENT':
       return {
@@ -25,5 +18,3 @@ function comments(state: any = [], action: any) {
       return state;
   }
 }
-
-export default comments;
