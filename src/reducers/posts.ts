@@ -7,12 +7,3 @@ export default function posts(state: any = [], action: any) {
       return state;
   }
 }
-
-// a reducer can takes two things
-// 1. the actions
-// 2. copy of current State
-
-// console.log(state, action);
-// return updated state
-// console.log('incrementing likes');
-// console.log(i, action);

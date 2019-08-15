@@ -1,7 +1,6 @@
 export default function comments(state: any = [], action: any) {
   switch (action.type) {
     case 'ADD_COMMENT':
-      console.log({ state });
       return {
         ...state,
         [action.postId]: [...(state[action.postId] || []), { user: action.author, text: action.comment }]

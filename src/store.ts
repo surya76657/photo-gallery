@@ -1,17 +1,15 @@
-import { createStore
-  // , compose
-} from 'redux';
+import { createStore } from 'redux';
 import rootReducer from './reducers/index';
 import comments from './data/comments';
 import posts from './data/posts';
-
 const defaultState = { posts, comments };
+const store = createStore(rootReducer, defaultState);
+export default store;
+
+// , compose
 // const enhancer = compose(window.devToolsExtension ? window.devToolsExtension() : (f) => (f))
 
-const store = createStore(rootReducer, defaultState
-    // , enhancer
-);
-
+// , enhancer
 // if (module.hot) {
 //   module.hot.accept('./reducers/', () => {
 //     const nextRootReducer = require('./reducers/index').default;
@@ -19,7 +17,6 @@ const store = createStore(rootReducer, defaultState
 //   })
 // }
 
-export default store;
 // import { syncHistoryWithStore } from 'react-router-redux';
 // import { browserHistory } from 'react-router';
 
